@@ -1,4 +1,4 @@
-import { ModeToggle } from "@/components/mode-toggle";
+import { ModeToggle } from "@/components/appComponents/mode-toggle";
 
 export default function Home() {
   return (

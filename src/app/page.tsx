@@ -9,12 +9,23 @@ import { Button } from "@/components/ui/button";
 import { Mail, Lock } from "lucide-react";
 import InputWithIcon from "@/components/ui/inputWithIcon";
 import { useRouter } from "next/navigation";
+import { Label } from "recharts";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function Login() {
   const router = useRouter();
   const loginSchema = z.object({
     email: z.string().email("Invalid email address"),
     password: z.string().min(6, "Password must be at least 6 characters"),
+    dashboard: z.string().nonempty("Dashboard selection is required"),
   });
 
   const form = useForm({
@@ -22,12 +33,13 @@ export default function Login() {
     defaultValues: {
       email: "",
       password: "",
+      dashboard: "",
     },
   });
 
   const onSubmit = (data: z.infer<typeof loginSchema>) => {
     console.log("Login Data:", data);
-    router.push("/dashboard");
+    router.push(data.dashboard);
   };
 
   return (
@@ -63,7 +75,7 @@ export default function Login() {
               render={({ field }) => (
                 <FormItem>
                   <InputWithIcon
-                    className="p-6 rounded-3xl pl-10"
+                    className="p-6 rounded-3xl pl-10 text-black shadow-md "
                     label="Email"
                     field={field}
                     placeholder="Enter your email"
@@ -87,8 +99,33 @@ export default function Login() {
                     type="password"
                     icon={Lock}
                     showPasswordToggle={true}
-                    className="p-6 rounded-3xl pl-10"
+                    className="p-6 rounded-3xl pl-10 text-black shadow-md"
                   />
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="dashboard"
+              render={({ field }) => (
+                <FormItem>
+                  <Label>Dashboard</Label>
+                  <Select onValueChange={field.onChange} value={field.value}>
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="Select dashboard" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectGroup>
+                        <SelectLabel>Dashboards</SelectLabel>
+                        <SelectItem value="/admin/dashboard">Admin</SelectItem>
+                        <SelectItem value="/labAdministrator/dashboard">
+                          Lab Administrator
+                        </SelectItem>
+                      </SelectGroup>
+                    </SelectContent>
+                  </Select>
                   <FormMessage />
                 </FormItem>
               )}
