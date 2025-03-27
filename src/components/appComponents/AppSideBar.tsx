@@ -26,6 +26,8 @@ const dashboardLabels = {
   salesManager: "Sales Manager",
   logistics: "Logistics",
   customerService: "Customer Service",
+  pharmacyClient: "Client Profile (Pharmacy)",
+  pharmacyGroup: "Pharmacy Group",
 };
 
 export function AppSideBar({ type }: { type: keyof typeof allNavigations }) {

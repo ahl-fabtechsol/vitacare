@@ -135,6 +135,12 @@ export default function Login() {
                         <SelectItem value="/customerService/dashboard">
                           Customer Service
                         </SelectItem>
+                        <SelectItem value="/pharmacyClient/dashboard">
+                          Pharmacy Client
+                        </SelectItem>
+                        <SelectItem value="/pharmacyGroup/dashboard">
+                          Pharmacy Group
+                        </SelectItem>
                       </SelectGroup>
                     </SelectContent>
                   </Select>

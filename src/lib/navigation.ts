@@ -271,11 +271,76 @@ export const customerServiceNavigation = [
   },
 ]
 
+
+export const pharmacyClientNavigation = [
+  {
+    title: "Dashboard",
+    url: "/pharmacyClient/dashboard",
+    icon: Home,
+  },
+  {
+    title: "Order List",
+    url: "/pharmacyClient/orderList",
+    icon: Home,
+  },
+  {
+    title: "Catalog",
+    url: "/pharmacyClient/catalog",
+    icon: Home,
+  },
+  {
+    title: "Chats",
+    url: "/pharmacyClient/chats",
+    icon: Home,
+  },
+  {
+    title: "Activity",
+    url: "/pharmacyClient/activity",
+    icon: Home,
+  },
+]
+
+export const pharmacyGroupNavigation = [
+  {
+    title: "Dashboard",
+    url: "/pharmacyGroup/dashboard",
+    icon: Home,
+  },
+  {
+    title: "Catalog",
+    url: "/pharmacyGroup/catalog",
+    icon: Home,
+  },
+  {
+    title: "Orders",
+    url: "/pharmacyGroup/orders",
+    icon: Home,
+  },
+  {
+    title: "Group Members",
+    url: "/pharmacyGroup/groupMembers",
+    icon: Home,
+  },
+  {
+    title: "Group Agreement",
+    url: "/pharmacyGroup/groupAgreement",
+    icon: Home,
+  },
+  {
+    title: "Chats",
+    url: "/pharmacyGroup/chats",
+    icon: Home,
+  },
+]
+
+
   export const allNavigations = {
     admin: adminNavigation,
     labAdministrator: labAdministratorNavigation,
     labSalesRepresentatives:labSalesRepresentativesNavigation,
     salesManager:salesManagerNavigation,
     logistics:logisticsNavigation,
-    customerService:customerServiceNavigation
+    customerService:customerServiceNavigation,
+    pharmacyClient:pharmacyClientNavigation,
+    pharmacyGroup:pharmacyGroupNavigation
   }

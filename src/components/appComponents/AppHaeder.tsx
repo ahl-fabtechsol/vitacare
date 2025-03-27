@@ -8,6 +8,8 @@ const dashboardLabels = {
   salesManager: "Sales Manager",
   logistics: "Logistics",
   customerService: "Customer Service",
+  pharmacyClient: "Client Profile (Pharmacy)",
+  pharmacyGroup: "Pharmacy Group",
 };
 
 export default function AppHaeder({
