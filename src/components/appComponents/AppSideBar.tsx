@@ -22,6 +22,10 @@ import { allNavigations } from "@/lib/navigation";
 const dashboardLabels = {
   admin: "Admin Panel",
   labAdministrator: "Laboratory Admin Panel",
+  labSalesRepresentatives: "Lab Sales Representatives Dashboard",
+  salesManager: "Sales Manager",
+  logistics: "Logistics",
+  customerService: "Customer Service",
 };
 
 export function AppSideBar({ type }: { type: keyof typeof allNavigations }) {

@@ -52,7 +52,7 @@ export default function Login() {
           style={{ objectFit: "cover" }}
         />
       </div>
-      <div className="bg-white flex flex-col items-center col-span-2 lg:col-span-1 p-6 md:p-20 xl:p-32 gap-6 justify-center">
+      <div className="bg-white flex flex-col items-center col-span-2 lg:col-span-1 py-6 px-6 md:px-20 xl:px-32 gap-6 justify-center">
         <div className="rounded-2xl bg-primary p-6 md:p-10 w-full">
           <p className="text-lg md:text-3xl text-white text-center font-extrabold">
             VitaCare
@@ -122,6 +122,18 @@ export default function Login() {
                         <SelectItem value="/admin/dashboard">Admin</SelectItem>
                         <SelectItem value="/labAdministrator/dashboard">
                           Lab Administrator
+                        </SelectItem>
+                        <SelectItem value="/labSalesRepresentatives/dashboard">
+                          Lab Sales Representatives
+                        </SelectItem>
+                        <SelectItem value="/salesManager/dashboard">
+                          Sales Manager
+                        </SelectItem>
+                        <SelectItem value="/logistics/dashboard">
+                          Logistics
+                        </SelectItem>
+                        <SelectItem value="/customerService/dashboard">
+                          Customer Service
                         </SelectItem>
                       </SelectGroup>
                     </SelectContent>

@@ -121,8 +121,161 @@ export const adminNavigation = [
   ];
 
 
+  export const labSalesRepresentativesNavigation = [
+    {
+      title: "Dashboard",
+      url: "/labSalesRepresentatives/dashboard",
+      icon: Home,
+    },
+    {
+      title: "Clients",
+      url: "/labSalesRepresentatives/clients",
+      icon: Home,
+    },
+    {
+      title: "Orders",
+      url: "/labSalesRepresentatives/orders",
+      icon: Home,
+    },
+    {
+      title: "Catalog",
+      url: "/labSalesRepresentatives/catalog",
+      icon: Home,
+    },
+    {
+      title: "Activity",
+      url: "/labSalesRepresentatives/activity",
+      icon: Home,
+    },
+    {
+      title: "Chats",
+      url: "/labSalesRepresentatives/chats",
+      icon: Home,
+    },
+  ]
+
+
+export const salesManagerNavigation = [
+  {
+    title: "Dashboard",
+    url: "/salesManager/dashboard",
+    icon: Home,
+  },
+  {
+    title: "Catalog",
+    url: "/salesManager/catalog",
+    icon: Home,
+  },
+  {
+    title: "Clients",
+    url: "/salesManager/clients",
+    icon: Home,
+  },
+  {
+    title: "Orders",
+    url: "/salesManager/orders",
+    icon: Home,
+  },
+  {
+    title: "Sales Performance Tracking",
+    url: "/salesManager/salesPerformanceTracking",
+    icon: Home,
+  },
+  {
+    title: "Team Members",
+    url: "/salesManager/teamMembers",
+    icon: Home,
+  },
+  {
+    title: "Chats",
+    url: "/salesManager/chats",
+    icon: Home,
+  },
+  {
+    title: "Activity",
+    url: "/salesManager/activity",
+    icon: Home,
+  },
+]
+
+
+export const logisticsNavigation = [
+  {
+    title: "Dashboard",
+    url: "/logistics/dashboard",
+    icon: Home,
+  },
+  {
+    title: "Shipping Coordination & Order Fulfillment",
+    url: "/logistics/fulfillment",
+    icon: Home,
+  },
+  {
+    title: "Inventory",
+    url: "/logistics/inventory",
+    icon: Home,
+  },
+  {
+    title: "Returns",
+    url: "/logistics/returns",
+    icon: Home,
+  },
+  {
+    title: "Chats",
+    url: "/logistics/chats",
+    icon: Home,
+  },
+  {
+    title: "Activity",
+    url: "/logistics/activity",
+    icon: Home,
+  },
+]
+
+
+export const customerServiceNavigation = [
+  {
+    title: "Dashboard",
+    url: "/customerService/dashboard",
+    icon: Home,
+  },
+  {
+    title: "Catalog",
+    url: "/customerService/catalog",
+    icon: Home,
+  },
+  {
+    title: "Orders",
+    url: "/customerService/orders",
+    icon: Home,
+  },
+  {
+    title: "Clients",
+    url: "/customerService/clients",
+    icon: Home,
+  },
+  {
+    title: "Feedbacks",
+    url: "/customerService/feedbacks",
+    icon: Home,
+  },
+  {
+    title: "Chats",
+    url: "/customerService/chats",
+    icon: Home,
+  },
+  {
+    title: "Activity",
+    url: "/customerService/activity",
+    icon: Home,
+  },
+]
+
   export const allNavigations = {
     admin: adminNavigation,
     labAdministrator: labAdministratorNavigation,
-    
+    labSalesRepresentatives:labSalesRepresentativesNavigation,
+    salesManager:salesManagerNavigation,
+    logistics:logisticsNavigation,
+    customerService:customerServiceNavigation
   }

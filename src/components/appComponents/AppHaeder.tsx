@@ -4,6 +4,10 @@ import { ModeToggle } from "./mode-toggle";
 const dashboardLabels = {
   admin: "Admin Dashboard",
   labAdministrator: "Lab Admin Dashboard",
+  labSalesRepresentatives: "Lab Sales Representatives Dashboard",
+  salesManager: "Sales Manager",
+  logistics: "Logistics",
+  customerService: "Customer Service",
 };
 
 export default function AppHaeder({
