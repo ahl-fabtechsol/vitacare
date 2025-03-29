@@ -1,6 +1,20 @@
 import { Calendar, Home, Inbox, LogOut, Search, Settings } from "lucide-react";
 
 
+export const dashboardLabels = {
+  admin: "Admin Panel",
+  labAdministrator: "Laboratory Admin Panel",
+  labSalesRepresentatives: "Lab Sales Representatives Dashboard",
+  salesManager: "Sales Manager",
+  logistics: "Logistics",
+  customerService: "Customer Service",
+  pharmacyClient: "Client Profile (Pharmacy)",
+  pharmacyGroup: "Pharmacy Group",
+};
+
+
+
+
 export const adminNavigation = [
     {
       title: "Dashboard",

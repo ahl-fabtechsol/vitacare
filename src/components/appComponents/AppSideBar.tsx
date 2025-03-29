@@ -13,34 +13,31 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import { Button } from "../ui/button";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import { allNavigations } from "@/lib/navigation";
-
-const dashboardLabels = {
-  admin: "Admin Panel",
-  labAdministrator: "Laboratory Admin Panel",
-  labSalesRepresentatives: "Lab Sales Representatives Dashboard",
-  salesManager: "Sales Manager",
-  logistics: "Logistics",
-  customerService: "Customer Service",
-  pharmacyClient: "Client Profile (Pharmacy)",
-  pharmacyGroup: "Pharmacy Group",
-};
+import { allNavigations, dashboardLabels } from "@/lib/navigation";
 
 export function AppSideBar({ type }: { type: keyof typeof allNavigations }) {
   const pathname = usePathname();
   const navigation = allNavigations[type];
   const dashboardLabel = dashboardLabels[type];
   const router = useRouter();
+  const { state } = useSidebar();
   return (
-    <Sidebar>
+    <Sidebar collapsible="icon">
       <SidebarHeader className="bg-primary">
         <div className="flex flex-col items-center p-2 justify-center text-white">
-          <span className="text-lg font-semibold">VitaCare</span>
-          <span className="text-xs ">A medical software</span>
+          {state === "collapsed" ? (
+            <span className="text-lg font-semibold my-2">V</span>
+          ) : (
+            <>
+              <span className="text-lg font-semibold">VitaCare</span>
+              <span className="text-xs">A medical software</span>
+            </>
+          )}
         </div>
       </SidebarHeader>
       <SidebarContent>
@@ -76,13 +73,11 @@ export function AppSideBar({ type }: { type: keyof typeof allNavigations }) {
       </SidebarContent>
       <SidebarFooter className="p-4">
         <Button
-          className="bg-gray-300 text-black dark:bg-white cursor-pointer"
-          onClick={() => {
-            router.push("/");
-          }}
+          className="bg-gray-300 text-black dark:bg-white cursor-pointer flex items-center justify-center w-full"
+          onClick={() => router.push("/")}
         >
-          <LogOut color="red" size={20} />
-          Logout
+          <LogOut color="red" size={20} className="" />
+          {state !== "collapsed" && <span className="ml-2">Logout</span>}
         </Button>
       </SidebarFooter>
     </Sidebar>
